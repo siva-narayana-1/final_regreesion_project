@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Regression App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Select Regression Model</h1>
+    <div class="button-box">
+      <a href="{{ url_for('slr') }}" class="btn">Simple Linear Regression</a>
+      <a href="{{ url_for('mlr') }}" class="btn">Multiple Linear Regression</a>
+    </div>
+  </div>
+</body>
+</html>
