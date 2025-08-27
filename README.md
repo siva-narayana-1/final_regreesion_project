@@ -1,68 +1,294 @@
-📈 Regression Models in Python
-A hands-on project demonstrating Simple Linear Regression (SLR) and Multiple Linear Regression (MLR) using Python & scikit-learn.
+# 📈 Regression Models in Python  
 
-This project shows how to:
-- Train and evaluate regression models
-- Visualize predictions vs actual data
-- Save trained models using Pickle
+A hands-on project demonstrating **Simple Linear Regression (SLR)** and **Multiple Linear Regression (MLR)** using **Python & scikit-learn**.  
 
-✨ Features
-•	🔹 Load and preprocess datasets
-•	🔹 Train Simple Linear Regression on Salary_Data.csv
-•	🔹 Train Multiple Linear Regression on 50_Startups.csv
-•	🔹 Evaluate with R² Score & Mean Squared Error (MSE)
-•	🔹 Visualize results with Matplotlib
-•	🔹 Save trained models as .pkl for reuse
-📂 Project Structure
-.
-├── Salary_Data.csv       # Dataset for Simple Linear Regression
-├── 50_Startups.csv       # Dataset for Multiple Linear Regression
-├── regression.py         # Main script with REGRESSION class
-├── slr_model.pkl         # Pickled Simple Linear Regression model
-├── mlr_model.pkl         # Pickled Multiple Linear Regression model
-└── README.md             # Project documentation
-⚙️ Installation
-Clone the repo and install dependencies:
+This project shows how to:  
+- Train and evaluate regression models  
+- Visualize predictions vs actual data  
+- Save trained models using **Pickle**  
+
+---
+
+## ✨ Features  
+- 🔹 Load and preprocess datasets  
+- 🔹 Train **Simple Linear Regression** on `Salary_Data.csv`  
+- 🔹 Train **Multiple Linear Regression** on `50_Startups.csv`  
+- 🔹 Evaluate with **R² Score** & **Mean Squared Error (MSE)**  
+- 🔹 Visualize results with **Matplotlib**  
+- 🔹 Save trained models as `.pkl` for reuse  
+
+---
+
+## 📂 Project Structure  
+```plaintext
+├── Salary_Data.csv # Dataset for Simple Linear Regression
+├── 50_Startups.csv # Dataset for Multiple Linear Regression
+├── regression.py # Main script with REGRESSION class
+├── slr_model.pkl # Pickled Simple Linear Regression model
+├── mlr_model.pkl # Pickled Multiple Linear Regression model
+└── README.md # Project documentation
+
+---
+
+## ⚙️ Installation  
+
+Clone the repo and install dependencies:  
+
+```bash
 git clone https://github.com/your-username/regression-models.git
 cd regression-models
 pip install pandas scikit-learn matplotlib scipy
-🚀 Usage
+---
+## 🚀 Usage
+
 Run the script:
 python regression.py
-✔️ The script will:
-1. Load both datasets
-2. Train SLR & MLR models
-3. Print training/testing results
-4. Show regression plots
-5. Save trained models as slr_model.pkl & mlr_model.pkl
-📊 Example Outputs
-🔹 Console Output
-Simple Linear Regression:
+
+## Output of the code:
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+(.venv) PS C:\Users\sivan\Desktop\ML_projects\final_project_regreesion> python algorithm.py
+Simple Linear Regreesion:
    YearsExperience   Salary
 0              1.1  39343.0
 1              1.3  46205.0
-...
-
-The accuracy of the SLR Model is: 0.9574
-The Average loss of the model is: 28922215.61
-
-Multiple Linear Regression:
+2              1.5  37731.0
+3              2.0  43525.0
+4              2.2  39891.0
+Multiple Linear Regreesion:
    R&D Spend  Administration  Marketing Spend       State     Profit
 0  165349.20       136897.80        471784.10    New York  192261.83
 1  162597.70       151377.59        443898.53  California  191792.06
-...
+2  153441.51       101145.55        407934.54     Florida  191050.39
+3  144372.41       118671.85        383199.62    New York  182901.99
+4  142107.34        91391.77        366168.42     Florida  166187.94
+The training data with predictions from the model are:
+    Experience    Salary  Predicted_Values_Model
+0          1.1   39343.0            36191.428231
+4          2.2   39891.0            46464.418127
+16         5.1   66029.0            73547.755126
+5          2.9   56642.0            53001.775334
+13         4.1   57081.0            64208.673403
+11         4.0   55794.0            63274.765230
+22         7.9  101302.0            99697.183953
+1          1.3   46205.0            38059.244576
+2          1.5   37731.0            39927.060921
+25         9.0  105582.0           109970.173849
+3          2.0   43525.0            44596.601783
+21         7.1   98273.0            92225.918574
+26         9.5  116969.0           114639.714711
+18         5.9   81363.0            81019.020505
+29        10.5  121872.0           123978.796435
+20         6.8   91738.0            89424.194057
+7          3.2   54445.0            55803.499851
+10         3.9   63218.0            62340.857058
+14         4.5   61111.0            67944.306092
+19         6.0   93940.0            81952.928678
+6          3.0   60150.0            53935.683506
+The accuracy of the slr Model is:0.9574526669392872
+The Average loss of the model is:28922215.61238366
+The training data with predictions from the model are:
+    Experience    Salary  Predicted_Values_Model
+27         9.6  112635.0           115573.622884
+15         4.9   67938.0            71679.938782
+23         8.2  113812.0           102498.908470
+17         5.3   83088.0            75415.571471
+8          3.2   64445.0            55803.499851
+9          3.7   57189.0            60473.040713
+28        10.3  122391.0           122110.980090
+24         8.7  109431.0           107168.449332
+12         4.0   56957.0            63274.765230
+The accuracy of the slr Model is:0.9414466227178214
+The Average loss of the model is:37784662.46621314
+['New York' 'California' 'Florida']
+    R&D Spend  Administration  Marketing Spend  State
+0   165349.20       136897.80        471784.10      1
+1   162597.70       151377.59        443898.53      2
+2   153441.51       101145.55        407934.54      3
+3   144372.41       118671.85        383199.62      1
+4   142107.34        91391.77        366168.42      3
+5   131876.90        99814.71        362861.36      1
+6   134615.46       147198.87        127716.82      2
+7   130298.13       145530.06        323876.68      3
+8   120542.52       148718.95        311613.29      1
+9   123334.88       108679.17        304981.62      2
+10  101913.08       110594.11        229160.95      3
+11  100671.96        91790.61        249744.55      2
+12   93863.75       127320.38        249839.44      3
+13   91992.39       135495.07        252664.93      2
+14  119943.24       156547.42        256512.92      3
+15  114523.61       122616.84        261776.23      1
+16   78013.11       121597.55        264346.06      2
+17   94657.16       145077.58        282574.31      1
+18   91749.16       114175.79        294919.57      3
+19   86419.70       153514.11             0.00      1
+20   76253.86       113867.30        298664.47      2
+21   78389.47       153773.43        299737.29      1
+22   73994.56       122782.75        303319.26      3
+23   67532.53       105751.03        304768.73      3
+24   77044.01        99281.34        140574.81      1
+25   64664.71       139553.16        137962.62      2
+26   75328.87       144135.98        134050.07      3
+27   72107.60       127864.55        353183.81      1
+28   66051.52       182645.56        118148.20      3
+29   65605.48       153032.06        107138.38      1
+30   61994.48       115641.28         91131.24      3
+31   61136.38       152701.92         88218.23      1
+32   63408.86       129219.61         46085.25      2
+33   55493.95       103057.49        214634.81      3
+34   46426.07       157693.92        210797.67      2
+35   46014.02        85047.44        205517.64      1
+36   28663.76       127056.21        201126.82      3
+37   44069.95        51283.14        197029.42      2
+38   20229.59        65947.93        185265.10      1
+39   38558.51        82982.09        174999.30      2
+40   28754.33       118546.05        172795.67      2
+41   27892.92        84710.77        164470.71      3
+42   23640.93        96189.63        148001.11      2
+43   15505.73       127382.30         35534.17      1
+44   22177.74       154806.14         28334.72      2
+45    1000.23       124153.04          1903.93      1
+46    1315.46       115816.21        297114.46      3
+47       0.00       135426.92             0.00      2
+48     542.05        51743.15             0.00      1
+49       0.00       116983.80         45173.06      2
+    R&D Spend  Administration  Marketing Spend  State
+6   134615.46       147198.87        127716.82      2
+41   27892.92        84710.77        164470.71      3
+46    1315.46       115816.21        297114.46      3
+47       0.00       135426.92             0.00      2
+15  114523.61       122616.84        261776.23      1
+9   123334.88       108679.17        304981.62      2
+16   78013.11       121597.55        264346.06      2
+24   77044.01        99281.34        140574.81      1
+34   46426.07       157693.92        210797.67      2
+31   61136.38       152701.92         88218.23      1
+0   165349.20       136897.80        471784.10      1
+44   22177.74       154806.14         28334.72      2
+27   72107.60       127864.55        353183.81      1
+33   55493.95       103057.49        214634.81      3
+5   131876.90        99814.71        362861.36      1
+29   65605.48       153032.06        107138.38      1
+11  100671.96        91790.61        249744.55      2
+36   28663.76       127056.21        201126.82      3
+1   162597.70       151377.59        443898.53      2
+21   78389.47       153773.43        299737.29      1
+2   153441.51       101145.55        407934.54      3
+43   15505.73       127382.30         35534.17      1
+35   46014.02        85047.44        205517.64      1
+23   67532.53       105751.03        304768.73      3
+40   28754.33       118546.05        172795.67      2
+10  101913.08       110594.11        229160.95      3
+22   73994.56       122782.75        303319.26      3
+18   91749.16       114175.79        294919.57      3
+49       0.00       116983.80         45173.06      2
+20   76253.86       113867.30        298664.47      2
+7   130298.13       145530.06        323876.68      3
+42   23640.93        96189.63        148001.11      2
+14  119943.24       156547.42        256512.92      3
+28   66051.52       182645.56        118148.20      3
+38   20229.59        65947.93        185265.10      1
+    R&D Spend  Administration  Marketing Spend  State
+6   134615.46       147198.87        127716.82      2
+41   27892.92        84710.77        164470.71      3
+46    1315.46       115816.21        297114.46      3
+47       0.00       135426.92             0.00      2
+15  114523.61       122616.84        261776.23      1
+9   123334.88       108679.17        304981.62      2
+16   78013.11       121597.55        264346.06      2
+24   77044.01        99281.34        140574.81      1
+34   46426.07       157693.92        210797.67      2
+31   61136.38       152701.92         88218.23      1
+0   165349.20       136897.80        471784.10      1
+44   22177.74       154806.14         28334.72      2
+27   72107.60       127864.55        353183.81      1
+33   55493.95       103057.49        214634.81      3
+5   131876.90        99814.71        362861.36      1
+29   65605.48       153032.06        107138.38      1
+11  100671.96        91790.61        249744.55      2
+36   28663.76       127056.21        201126.82      3
+1   162597.70       151377.59        443898.53      2
+21   78389.47       153773.43        299737.29      1
+2   153441.51       101145.55        407934.54      3
+43   15505.73       127382.30         35534.17      1
+35   46014.02        85047.44        205517.64      1
+23   67532.53       105751.03        304768.73      3
+40   28754.33       118546.05        172795.67      2
+10  101913.08       110594.11        229160.95      3
+22   73994.56       122782.75        303319.26      3
+18   91749.16       114175.79        294919.57      3
+49       0.00       116983.80         45173.06      2
+20   76253.86       113867.30        298664.47      2
+7   130298.13       145530.06        323876.68      3
+42   23640.93        96189.63        148001.11      2
+14  119943.24       156547.42        256512.92      3
+28   66051.52       182645.56        118148.20      3
+38   20229.59        65947.93        185265.10      1
+Training is done and model is ready to predict.
+The trained data with the prediction values:
+    R&D Spend  Administration  Marketing Spend  State     Profit  Predicted_values
+6   134615.46       147198.87        127716.82      2  156122.51     155738.348062
+41   27892.92        84710.77        164470.71      3   77798.83      77344.034203
+46    1315.46       115816.21        297114.46      3   49490.75      56775.260509
+47       0.00       135426.92             0.00      2   42559.73      44877.713483
+15  114523.61       122616.84        261776.23      1  129917.04     144649.722214
+9   123334.88       108679.17        304981.62      2  149759.96     155054.582024
+16   78013.11       121597.55        264346.06      2  126992.93     116259.939857
+24   77044.01        99281.34        140574.81      1  108552.04     113243.315890
+34   46426.07       157693.92        210797.67      2   96712.80      86060.415210
+31   61136.38       152701.92         88218.23      1   97483.56      94127.051812
+0   165349.20       136897.80        471784.10      1  192261.83     190080.024771
+44   22177.74       154806.14         28334.72      2   65200.33      61756.715340
+27   72107.60       127864.55        353183.81      1  105008.31     112539.871637
+33   55493.95       103057.49        214634.81      3   96778.92      99287.193011
+5   131876.90        99814.71        362861.36      1  156991.12     163490.477515
+29   65605.48       153032.06        107138.38      1  101004.64      98218.492617
+11  100671.96        91790.61        249744.55      2  144259.40     136815.249660
+36   28663.76       127056.21        201126.82      3   90708.19      75124.792268
+1   162597.70       151377.59        443898.53      2  191792.06     186624.727362
+21   78389.47       153773.43        299737.29      1  111313.02     113765.327874
+2   153441.51       101145.55        407934.54      3  191050.39     183675.910408
+43   15505.73       127382.30         35534.17      1   69758.98      58229.635390
+35   46014.02        85047.44        205517.64      1   96479.51      91343.894774
+23   67532.53       105751.03        304768.73      3  108733.99     111226.120389
+40   28754.33       118546.05        172795.67      2   78239.91      74341.502823
+10  101913.08       110594.11        229160.95      3  146121.95     136383.482027
+22   73994.56       122782.75        303319.26      3  110352.25     114840.400760
+18   91749.16       114175.79        294919.57      3  124266.90     129688.984388
+49       0.00       116983.80         45173.06      2   14681.40      47803.253442
+20   76253.86       113867.30        298664.47      2  118474.03     116494.364313
+7   130298.13       145530.06        323876.68      3  155752.60     158679.278264
+42   23640.93        96189.63        148001.11      2   71498.49      71572.827854
+14  119943.24       156547.42        256512.92      3  132602.65     147477.745147
+28   66051.52       182645.56        118148.20      3  103282.38      97883.553912
+38   20229.59        65947.93        185265.10      1   81229.06      71758.250791
+The Accuracy of the model on trained.
+95.11278731764929
+The Average Loss of the Model.81587538.1595339
+The Accuracy of the model on trained.
+94.00659697736397
+The Average Loss of the Model.84327239.72717635
+The test data with the prediction values:
+    R&D Spend  Administration  Marketing Spend  State     Profit  Predicted_Values
+13   91992.39       135495.07        252664.93      2  134307.35     125930.308679
+39   38558.51        82982.09        174999.30      2   81005.76      85533.011366
+30   61994.48       115641.28         91131.24      3   99937.59      99966.050566
+45    1000.23       124153.04          1903.93      1   64926.08      45913.473312
+17   94657.16       145077.58        282574.31      1  125370.37     127182.570422
+48     542.05        51743.15             0.00      1   35673.41      52079.477346
+26   75328.87       144135.98        134050.07      3  105733.54     109297.132852
+25   64664.71       139553.16        137962.62      2  107404.34     100386.459821
+32   63408.86       129219.61         46085.25      2   97427.84      97777.631211
+19   86419.70       153514.11             0.00      1  122776.86     111976.948775
+12   93863.75       127320.38        249839.44      3  141585.52     128950.902150
+4   142107.34        91391.77        366168.42      3  166187.94     174282.444749
+37   44069.95        51283.14        197029.42      2   89949.14      93463.607203
+8   120542.52       148718.95        311613.29      1  152211.77     148498.488171
+3   144372.41       118671.85        383199.62      1  182901.99     172399.140821
+(.venv) PS C:\Users\sivan\Desktop\ML_projects\final_project_regreesion>
+<img width="619" height="450" alt="image" src="https://github.com/user-attachments/assets/d8fd4c9d-1e80-4d40-907e-66dd0f44cb71" />
+<img width="621" height="458" alt="image" src="https://github.com/user-attachments/assets/05cfaeed-df31-454e-b1c4-a24b9a3e79a3" />
 
-The Accuracy of the MLR Model is: 95.11%
-The Average Loss of the Model: 81587538.16
-🔹 Visualizations
-Regression plots generated by the script:
-[Insert Images: SLR Plot, MLR Plot]
-🛠 Future Improvements
-•	✅ Use OneHotEncoder for categorical encoding
-•	✅ Add Cross-Validation for stronger evaluation
-•	✅ Deploy as a Flask/FastAPI API for real-time predictions
-👨‍💻 Author
-Your Name
-📌 Data Scientist | AI Developer
-📜 License
-This project is licensed under the MIT License – feel free to use and modify it.
